@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 import jakarta.inject.Qualifier;
 
 @Qualifier
-@Target(ElementType.PARAMETER)
+@Target({ ElementType.PARAMETER, ElementType.METHOD, ElementType.FIELD })
 @Retention(RetentionPolicy.RUNTIME)
 public @interface PrimaryStage {
 }

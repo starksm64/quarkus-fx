@@ -23,7 +23,7 @@ public class QuarkusFxApp {
     private AppController appController;
 
     public void start(@Observes @PrimaryStage final Stage stage) {
-        Log.info("Begin start", new Exception());
+        Log.info("Begin start");
         stage.setOnCloseRequest(event -> {
             Platform.exit();
             System.exit(0);
@@ -37,7 +37,6 @@ public class QuarkusFxApp {
             Scene scene = new Scene(fxmlParent, 300, 200);
             stage.setScene(scene);
             stage.setTitle("Hello World Quarkus + JavaFX ! 🪐");
-            Thread.sleep(1000);
             stage.show();
         } catch (Exception e) {
             throw new RuntimeException(e);
